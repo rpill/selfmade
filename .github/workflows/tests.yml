@@ -1,0 +1,27 @@
+name: Tests
+
+on:
+  push:
+    branches:
+      - '**'
+    tags:
+      - '**'
+
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Set up GitHub Actions
+      uses: actions/checkout@v2
+    - name: Use Node.js 14.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: 14.x
+    - name: Сheck if the repository is private
+      run: exit 1
+      if: ${{github.event.repository.private}}
+    - name: Get testing lib
+      run: set -eu && git clone -b refactor --single-branch https://github.com/rpill/selfmade-tests.git
+    - name: Run the tests
+      run: bash selfmade-tests/run.sh
