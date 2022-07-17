@@ -18,9 +18,9 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 14.x
-    - name: Сheck if the repository is private
-      run: exit 1
-      if: ${{github.event.repository.private}}
+    # - name: Сheck if the repository is private
+      # run: exit 1
+      # if: ${{github.event.repository.private}}
     - name: Get testing lib
       run: set -eu && git clone https://github.com/rpill/selfmade-tests.git
     - name: Run the tests
