@@ -18,10 +18,12 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: 14.x
+        cache: 'npm'
+        cache-dependency-path: '**/package-lock.json'
     # - name: Сheck if the repository is private
       # run: exit 1
       # if: ${{github.event.repository.private}}
     - name: Get testing lib
-      run: set -eu && git clone --branch master --single-branch --depth 1 https://github.com/rpill/selfmade-tests.git
+      run: set -eu && git clone --branch main --single-branch --depth 1 https://github.com/rpill/selfmade-tests.git
     - name: Run the tests
       run: bash selfmade-tests/run.sh
