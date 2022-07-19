@@ -23,5 +23,11 @@ jobs:
       # if: ${{github.event.repository.private}}
     - name: Get testing lib
       run: set -eu && git clone --branch main --single-branch --depth 1 https://github.com/rpill/selfmade-tests.git
+    - name: Cache dependencies
+      id: cache
+      uses: actions/cache@v3
+      with:
+        path: ./selfmade-tests/node_modules
+        key: modules-${{ hashFiles('package-lock.json') }}
     - name: Run the tests
       run: bash selfmade-tests/run.sh
