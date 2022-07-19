@@ -19,7 +19,6 @@ jobs:
       with:
         node-version: 14.x
         cache: 'npm'
-        cache-dependency-path: '**/package-lock.json'
     # - name: Сheck if the repository is private
       # run: exit 1
       # if: ${{github.event.repository.private}}
