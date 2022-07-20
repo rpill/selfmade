@@ -22,7 +22,7 @@ jobs:
       # run: exit 1
       # if: ${{github.event.repository.private}}
     - name: Get testing lib
-      run: set -eu && git clone --branch main --single-branch --depth 1 https://github.com/rpill/selfmade-tests.git
+      run: set -eu && git clone --branch main --single-branch --depth 1 https://github.com/rpill/selfmade-tests-2.git
     - name: Cache dependencies
       id: cache
       uses: actions/cache@v3
