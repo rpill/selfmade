@@ -27,7 +27,7 @@ jobs:
       id: cache
       uses: actions/cache@v3
       with:
-        path: ./selfmade-tests
+        path: ./selfmade-tests-2
         key: modules-${{ hashFiles('**/package-lock.json') }}
     - name: Run the tests
-      run: bash selfmade-tests/run.sh
+      run: bash selfmade-tests-2/run.sh
