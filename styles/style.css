@@ -51,7 +51,7 @@ blockquote {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 24px 20px;
+  padding: 24px 30px;
 }
 
 .header__logo {
@@ -99,7 +99,7 @@ blockquote {
 }
 
 .intro {
-  padding: 0 20px 38px;
+  padding: 0 30px 38px;
 }
 
 .intro__heading {
@@ -133,7 +133,7 @@ blockquote {
 }
 
 .reasons {
-  padding: 40px 20px;
+  padding: 40px 30px;
 }
 
 .content-section__subtitle {
@@ -164,7 +164,7 @@ blockquote {
 }
 
 .how-to {
-  padding: 40px 20px 60px;
+  padding: 40px 30px 60px;
 }
 
 .cards-list {
@@ -176,7 +176,7 @@ blockquote {
 
 .card {
   border-radius: 30px;
-  padding: 20px;
+  padding: 30px;
 }
 
 .card_theme_dark {
@@ -213,7 +213,7 @@ blockquote {
 }
 
 .footer {
-  padding: 20px;
+  padding: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
