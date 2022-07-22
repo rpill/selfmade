@@ -29,6 +29,6 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: layout-compare
-        path: selfmade-tests-2/output.jpg
+        path: ./selfmade-tests-2/output.jpg
     - name: Show test results
       run: bash selfmade-tests-2/result.sh
